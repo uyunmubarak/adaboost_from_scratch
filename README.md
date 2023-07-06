@@ -2,11 +2,15 @@
 
 ---
 
-AdaBoost adalah algoritma sequential yang meminimalkan batas atas dari kesalahan pengklasifikasian empiris dengan memilih weak klasifikasi dan bobotnya. AdaBoost berfokus meningkatkan kinerja model dengan cara mengurangi kesalahan prediksi. Setiap iterasi AdaBoost, bobot sampel yang salah diklasifikasikan akan ditingkatkan untuk memprioritaskan sampel-sampel yang sulit diklasifikasikan dengan benar oleh model sebelumnya. Dengan meningkatkan bobot pada sampel yang salah diklasifikasikan, model selanjutnya akan lebih fokus pada sampel-sampel yang sulit diklasifikasikan dan berusaha untuk mengurangi kesalahan prediksi tersebut. Maka dari itu, AdaBoost secara iteratif berusaha untuk meminimalkan cost function yang berkaitan dengan kesalahan prediksi pada setiap iterasinya. Optimasi function yang divariasikan adalah bobot sampel dan model parameter .
+AdaBoost adalah algoritma sequential yang meminimalkan batas atas dari kesalahan pengklasifikasian empiris dengan memilih weak klasifikasi dan bobotnya. AdaBoost berfokus meningkatkan kinerja model dengan cara mengurangi kesalahan prediksi. Setiap iterasi AdaBoost, bobot sampel yang salah diklasifikasikan akan ditingkatkan untuk memprioritaskan sampel-sampel yang sulit diklasifikasikan dengan benar oleh model sebelumnya. Dengan meningkatkan bobot pada sampel yang salah diklasifikasikan, model selanjutnya akan lebih fokus pada sampel-sampel yang sulit diklasifikasikan dan berusaha untuk mengurangi kesalahan prediksi tersebut. Maka dari itu, AdaBoost secara iteratif berusaha untuk meminimalkan cost function yang berkaitan dengan kesalahan prediksi pada setiap iterasinya. Optimasi function yang divariasikan adalah bobot sampel dan model parameter.
 
 **1. Bobot sampel**
+
 AdaBoost mendefinisikan distribusi bobot pada sampel data. Bobot-bobot ini diperbarui setiap kali weak learner yang baru ditambahkan, sehingga sampel yang salah diklasifikasikan oleh weak learner diberikan bobot yang lebih besar. Dengan cara ini, sampel yang saat ini salah diklasifikasikan lebih ditekankan selama pemilihan weak learner berikutnya. Maka dari itu, penyesuaian bobot sampel digunakan sebagai strategi optimasi untuk meminimalkan kesalahan prediksi dan meningkatkan akurasi model.
+
+
 **2. Model Parameter** 
+
 AdaBoost menggunakan model-model lemah (weak learner) sebagai komponen dasar dalam ensemble. Contoh weak learner yang efisien secara komputasi yaitu decision tree, dan decision stump (decision tree dengan satu level pemisahan). Dengan demikian, AdaBoost mengoptimalkan model parameter, yaitu parameter yang digunakan oleh weak learner untuk mengurangi kesalahan prediksi dan meningkatkan akurasi model keseluruhan.
 
 ---
@@ -73,7 +77,7 @@ Untuk meningkatkan performa model dilakukan eksperimen pada beberapa hyperparame
 <img src="src/best_params.png" width="1000"/>
 
 
-**Hasil Hyperparametr Secara Keseluruhan**
+**Hasil Beberapa Hyperparameter Secara Keseluruhan**
 <img src="src/result_all_params.png" width="1000"/>
 
 
